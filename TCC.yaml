@@ -186,10 +186,10 @@ paths:
               properties:
                 fromDate:
                   type: string
-                  format: date
+                  format: date-time
                 toDate:
                   type: string
-                  format: date
+                  format: date-time
               required:
                 - fromDate
                 - toDate
@@ -244,10 +244,10 @@ paths:
               properties:
                 fromDate:
                   type: string
-                  format: date
+                  format: date-time
                 toDate:
                   type: string
-                  format: date
+                  format: date-time
     delete:
       summary: Delete a Deadline.
       operationId: delete-deadlines-deadlineId
@@ -270,12 +270,12 @@ paths:
       parameters:
         - schema:
             type: string
-            format: date
+            format: date-time
           in: query
           name: startDate
         - schema:
             type: string
-            format: date
+            format: date-time
           in: query
           name: endDate
         - schema:
@@ -392,7 +392,7 @@ components:
       type: object
       properties:
         id:
-          type: string
+          type: integer
         fromDate:
           type: string
           format: date
